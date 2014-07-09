@@ -1,7 +1,9 @@
 package net.crowifick.neorise.items;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.crowifick.neorise.utility.NRItem;
 import net.crowifick.neorise.utility.Reference;
+import net.minecraft.creativetab.CreativeTabs;
 
 /**
  * User: Crowifick
@@ -13,9 +15,11 @@ import net.crowifick.neorise.utility.Reference;
 @GameRegistry.ObjectHolder(Reference.MODID)
 public class NRItems {
 
+    public static NRItem fatimaShard = new FatimaShard("FatimaShard", CreativeTabs.tabMaterials);
+
     public static void registerItems() {
 
-
+         GameRegistry.registerItem(fatimaShard, "fatimaShard");
 
     }
 

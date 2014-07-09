@@ -1,7 +1,11 @@
 package net.crowifick.neorise.blocks;
 
+import net.crowifick.neorise.items.NRItems;
 import net.crowifick.neorise.utility.NRBlock;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+import java.util.Random;
 
 /**
  * User: Crowifick
@@ -20,4 +24,17 @@ public class NienOre extends NRBlock {
         setHarvestLevel("pickaxe", 2);
 
     }
+
+    public int quantityDropped(Random random) {
+
+        return random.nextInt(3) + 1;
+
+    }
+
+    public Item getItemDropped(int i, Random random, int j) {
+
+        return NRItems.fatimaShard;
+
+    }
+
 }
